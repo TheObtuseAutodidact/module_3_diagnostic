@@ -6,6 +6,14 @@ class NrelService
   end
 
   def nearest(zip)
-    connection.get("/nearest.json?location=#{zip}&distance=6&limit=10&fuel_type=ELEC,LPG")
+    connection.get("nearest.json?location=#{zip}&distance=6&limit=10&fuel_type=ELEC,LPG")
   end
 end
+
+# https://developer.nrel.gov//api/alt-fuel-stations/v1/
+#       nearest.json?location=80203
+#                    &distance=6
+#                    &limit=10
+#                    &fuel_type=ELEC,LPG
+#                    &api_key=YDRJ4IEoeYjFdEHpL5IvsIknMhT6sf3q9Ia1a2tu
+#                    &format=JSON
