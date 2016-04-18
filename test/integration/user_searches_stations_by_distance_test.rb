@@ -6,7 +6,7 @@ class UserSearchesStationsByDistanceTest < ActionDispatch::IntegrationTest
     fill_in "80302"
     click_on "Locate"
 
-    assert(current_path) ("/search?zip=80203")
-    
+    assert(current_path), ("/search?zip=80203")
+
   end
 end

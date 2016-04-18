@@ -5,7 +5,7 @@ class Station
     @service ||= NrelService.new
   end
 
-  def self.all
-    service.nearest
+  def self.all(zip)
+    service.nearest(zip)
   end
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'stations/index'
+  # resources :stations, only: [:index]
 
   root 'welcome#index'
   get '/search', to: "search#index"
