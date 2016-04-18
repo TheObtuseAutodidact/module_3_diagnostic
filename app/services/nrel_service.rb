@@ -6,7 +6,7 @@ class NrelService
   end
 
   def nearest(zip)
-    connection.get("nearest.json?location=#{zip}&distance=6&limit=10&fuel_type=ELEC,LPG")
+    JSON.parse(connection.get("nearest.json?location=#{zip}&distance=6&limit=10&fuel_type=ELEC,LPG").body)
   end
 end
 

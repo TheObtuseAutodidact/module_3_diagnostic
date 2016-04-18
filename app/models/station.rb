@@ -1,10 +1,11 @@
 class Station
+  attr_reader :service
 
   def service
     @service ||= NrelService.new
   end
 
   def self.all
-    @service.fuel_stations
+    service.nearest
   end
 end
